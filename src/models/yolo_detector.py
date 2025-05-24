@@ -141,8 +141,26 @@ class PatternDetector:
         
         # Convert to numpy array
         fig.canvas.draw()
-        chart_image = np.frombuffer(fig.canvas.tostring_rgb(), dtype=np.uint8)
-        chart_image = chart_image.reshape(fig.canvas.get_width_height()[::-1] + (3,))
+        # Handle matplotlib API changes
+        try:
+            # New matplotlib API
+            chart_image = np.frombuffer(fig.canvas.buffer_rgba(), dtype=np.uint8)
+            chart_image = chart_image.reshape(fig.canvas.get_width_height()[::-1] + (4,))
+            chart_image = chart_image[:, :, :3]  # Remove alpha channel
+        except AttributeError:
+            try:
+                # Older matplotlib API
+                chart_image = np.frombuffer(fig.canvas.tostring_rgb(), dtype=np.uint8)
+                chart_image = chart_image.reshape(fig.canvas.get_width_height()[::-1] + (3,))
+            except AttributeError:
+                # Alternative method
+                import io
+                buf = io.BytesIO()
+                fig.savefig(buf, format='png', dpi=150, bbox_inches='tight')
+                buf.seek(0)
+                from PIL import Image
+                img = Image.open(buf)
+                chart_image = np.array(img)[:, :, :3]  # Remove alpha if present
         
         plt.close(fig)
         return chart_image
