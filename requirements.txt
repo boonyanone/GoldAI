@@ -1,11 +1,17 @@
+# GPU Setup (Recommended for Production)
+# For NVIDIA GPU with CUDA support, install PyTorch with CUDA:
+# pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu126
+
 # Core ML/DL frameworks
 torch>=2.0.0
 torchvision>=0.15.0
+# Note: For GPU acceleration, use PyTorch with CUDA support (see GPU_SETUP.md)
 tensorflow>=2.13.0
 keras>=2.13.0
 
 # Object Detection and Computer Vision
 ultralytics>=8.0.0
+# Note: Use ultralytics==8.3.144 for system install or 8.0.196 for virtual environments
 opencv-python>=4.8.0
 Pillow>=10.0.0
 
