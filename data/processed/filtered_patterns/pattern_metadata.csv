@@ -1,0 +1,3 @@
+pattern_id,symbol,timeframe,start_date,end_date,duration,return_pct,max_drawdown_pct,recovery_ratio,quality_score,composite_score,volume_confirmation,label
+1,ETH_USD,4h,2025-02-26 04:00:00+00:00,2025-03-02 20:00:00+00:00,24,1.2127589849161493,16.362919299946665,1.0,70,87.03129933494282,True,hold
+2,ETH_USD,4h,2025-02-26 00:00:00+00:00,2025-03-02 20:00:00+00:00,25,1.0435496132306528,16.362919299946665,1.0,70,86.86208996325732,True,hold

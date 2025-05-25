@@ -1,0 +1,15 @@
+{
+  "total_patterns": 2,
+  "average_return": 1.128154299073401,
+  "median_return": 1.128154299073401,
+  "average_drawdown": 16.362919299946665,
+  "average_duration": 24.5,
+  "buy_signals": 0,
+  "hold_signals": 2,
+  "symbols_covered": 1,
+  "quality_distribution": {
+    "A_grade": 0,
+    "B_grade": 2,
+    "C_grade": 0
+  }
+}

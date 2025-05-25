@@ -1,0 +1,9 @@
+{
+  "validation_date": "2025-05-24T14:14:02.596866",
+  "summary_statistics": {
+    "total_patterns": 18146,
+    "duration_stats": {
+      "mean": 133.1052022484294,
+      "median": 139.0,
+      "std": 45.53128465261767,
+      "min": 
