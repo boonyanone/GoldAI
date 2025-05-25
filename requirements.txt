@@ -20,10 +20,19 @@ yfinance>=0.2.18
 pandas>=2.0.0
 numpy>=1.24.0
 scipy>=1.11.0
+ccxt>=4.0.0           # Cryptocurrency exchange integration
+PyYAML>=6.0           # YAML configuration files
 
 # Technical Analysis
 TA-Lib>=0.4.25
 pandas-ta>=0.3.14b0
+
+# Advanced Pattern Recognition
+stumpy>=1.12.0         # Time series motif discovery
+ruptures>=1.1.8        # Change point detection  
+hurst>=0.0.5           # Hurst exponent for trend analysis
+arch>=5.3.0            # ARCH/GARCH models for volatility
+statsmodels>=0.14.0    # Statistical time series analysis
 
 # Data Visualization
 matplotlib>=3.7.0
